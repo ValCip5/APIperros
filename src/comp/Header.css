@@ -1,0 +1,39 @@
+header{
+    background: var(--naranjito);
+}
+
+nav{
+    padding: 0 30px;
+    max-width: 1024px;
+    margin: auto;
+}
+
+nav img{
+    margin-bottom: -8px;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+ul i{
+    color: var(--bordercito);
+    font-size: 24px;
+    transition: 0.4s ease-in-out;
+}
+
+ul i:hover{
+    color: var(--bordercitoLight);
+}
+
+nav ul .info{
+    text-align: right;
+    margin-right: 10px;
+    display: inline-block;
+    transition: 0.4s ease-in-out;
+}
+

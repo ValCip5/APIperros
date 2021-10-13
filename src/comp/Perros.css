@@ -1,0 +1,14 @@
+.my-masonry-grid{
+    list-style-type: none;
+    max-width: 1024px;
+    margin: auto;
+    text-align: center;
+}
+
+.conPerro{
+    transition: 0.4s;
+}
+
+.conPerro:hover{
+    transform: scale(1.12);
+}
