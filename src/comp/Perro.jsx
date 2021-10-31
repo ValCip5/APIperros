@@ -4,12 +4,10 @@ import './Perro.css';
 function Perro(props) {
     const [traerImg, setTraerImg] = useState(null)
   
-    function fetchImg() {
-      const traemeloPorfi = fetch(`https://dog.ceo/api/breed/${props.nombre}/images`) //siempre va a pasar esto
-      traemeloPorfi.then(respuesta => respuesta.json()).then(dato => setTraerImg(dato.message))
-    }
-  
-    useEffect(() => {fetchImg()}, [])
+    useEffect(() => {
+        const traemeloPorfi = fetch(`https://dog.ceo/api/breed/${props.nombre}/images`) //siempre va a pasar esto
+        traemeloPorfi.then(respuesta => respuesta.json()).then(dato => setTraerImg(dato.message))
+    }, [])
 
     return (
 

@@ -4,7 +4,7 @@ import './Perros.css'
 import React, { useState, useEffect } from 'react';
 import Masonry from 'react-masonry-css';
 
-function Perros() {
+function Perros({buscar}) { //al pasar una prop react lo recibe adentro del objeto
     const [traerPerros, setTraerPerros] = useState(null)
   
     function fetchNombre() {
@@ -26,6 +26,10 @@ function Perros() {
         columnClassName="my-masonry-grid_column">
 
         {traerPerros && Object.entries(traerPerros).map(elemento => {
+        if (buscar !== "" && !elemento[0].includes(buscar)) {
+            return null
+        }   
+
         return <div className="li">
                     <Perro nombre={elemento[0]}/>
                 </div>
